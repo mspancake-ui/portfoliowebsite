@@ -1,0 +1,1048 @@
+/* ==========================================
+   FONTS
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+
+/* ==========================================
+   COLOR VARIABLES
+   ========================================== */
+
+:root {
+
+    /* Light mode */
+    --lavender-deep: #b6a4e8;
+    --lavender: #cdbdf0;
+    --pink-mid: #e9c3e0;
+    --peach: #f3c9c0;
+    --cream: #fbe9c9;
+
+    --card-bg: #f2ecfc;
+    --card-border: #c9b6ec;
+    --pink-border: #f0a8c2;
+
+    --text-deep: #4a3b6b;
+    --text-soft: #6b5a91;
+
+    --sparkle: #fceec2;
+
+    --radius-bubble: 26px;
+    --radius-photo: 50%;
+}
+
+
+/* ==========================================
+   DARK MODE
+   ========================================== */
+
+body.dark-mode {
+
+    --lavender-deep: #211a35;
+    --lavender: #302448;
+    --pink-mid: #49304a;
+    --peach: #5a3c4b;
+    --cream: #302638;
+
+    --card-bg: #29213d;
+    --card-border: #66528a;
+    --pink-border: #b86b91;
+
+    --text-deep: #f5eaff;
+    --text-soft: #c9b9df;
+
+    --sparkle: #fff1b8;
+}
+
+
+/* ==========================================
+   RESET
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+   ========================================== */
+
+body {
+
+    margin: 0;
+
+    font-family: 'Quicksand', sans-serif;
+
+    color: var(--text-deep);
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--lavender-deep) 0%,
+            var(--lavender) 22%,
+            var(--pink-mid) 48%,
+            var(--peach) 70%,
+            var(--cream) 100%
+        );
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    overflow-x: hidden;
+
+    position: relative;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease;
+}
+
+
+/* ==========================================
+   PAGE CONTAINER
+   ========================================== */
+
+.page {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    position: relative;
+
+    padding: 24px 20px 60px;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   BACKGROUND CLOUDS
+   ========================================== */
+
+.cloud {
+
+    position: absolute;
+
+    left: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.cloud-top {
+
+    top: auto;
+
+    bottom: 0;
+
+    left: 0;
+
+    z-index: 1;
+}
+
+
+.cloud-bottom {
+
+    top: auto;
+
+    bottom: 0;
+
+    left: 0;
+
+    z-index: 0;
+}
+
+
+/* ==========================================
+   ✨ BACKGROUND SPARKLE SYSTEM
+   ========================================== */
+
+/*
+   This layer covers the screen and places
+   the decorations independently from the cards.
+
+   This is what makes the stars feel scattered
+   across the whole design instead of being
+   attached to one particular section.
+*/
+
+.sparkle-layer {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.bg-star {
+
+    position: absolute;
+
+    height: auto;
+
+    pointer-events: none;
+
+    opacity: 0.9;
+}
+
+
+/* ==========================================
+   ⭐ LARGE STARS
+   ========================================== */
+
+.star-1 {
+
+    top: 8%;
+    left: 12%;
+
+    width: 16px;
+
+    transform: rotate(12deg);
+}
+
+
+.star-2 {
+
+    top: 17%;
+    right: 15%;
+
+    width: 13px;
+
+    transform: rotate(-10deg);
+}
+
+
+.star-3 {
+
+    top: 31%;
+    left: 7%;
+
+    width: 18px;
+
+    transform: rotate(18deg);
+}
+
+
+.star-4 {
+
+    top: 44%;
+    right: 8%;
+
+    width: 14px;
+
+    transform: rotate(-15deg);
+}
+
+
+.star-5 {
+
+    top: 63%;
+    left: 11%;
+
+    width: 12px;
+
+    transform: rotate(25deg);
+}
+
+
+.star-6 {
+
+    top: 82%;
+    right: 13%;
+
+    width: 19px;
+
+    transform: rotate(-12deg);
+}
+
+
+/* ==========================================
+   ✨ SMALL SPARKLES
+   ========================================== */
+
+.sparkle-1 {
+
+    top: 12%;
+    left: 27%;
+
+    width: 13px;
+}
+
+
+.sparkle-2 {
+
+    top: 26%;
+    right: 27%;
+
+    width: 11px;
+}
+
+
+.sparkle-3 {
+
+    top: 49%;
+    left: 23%;
+
+    width: 15px;
+}
+
+
+.sparkle-4 {
+
+    top: 70%;
+    right: 27%;
+
+    width: 12px;
+}
+
+
+.sparkle-5 {
+
+    top: 91%;
+    left: 25%;
+
+    width: 14px;
+}
+
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.nav-buttons {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.nav-buttons a {
+
+    text-decoration: none;
+
+    font-family: 'Baloo 2', sans-serif;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    color: var(--text-deep);
+
+    background: var(--card-bg);
+
+    padding: 8px 18px;
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 2px 6px rgba(90, 60, 130, 0.15);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.nav-buttons a:hover,
+.nav-buttons a:focus-visible {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(90, 60, 130, 0.22);
+}
+
+
+/* ==========================================
+   HERO
+   ========================================== */
+
+.hero,
+.about,
+.projects,
+.contact {
+
+    padding: 20px 12px;
+}
+
+
+.hero {
+
+    position: relative;
+
+    margin-bottom: 34px;
+}
+
+
+.hero-text {
+
+    background: var(--card-bg);
+
+    border: 1.5px solid var(--card-border);
+
+    border-radius: var(--radius-bubble);
+
+    padding: 22px 26px 26px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 14px rgba(90, 60, 130, 0.12);
+
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.hero-text h1 {
+
+    font-family: 'Baloo 2', sans-serif;
+
+    font-size: 22px;
+
+    margin: 0 0 10px;
+
+    color: var(--text-deep);
+}
+
+
+.hero-text h2 {
+
+    font-family: 'Baloo 2', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin: 0 0 10px;
+
+    color: var(--text-deep);
+
+    line-height: 1.4;
+}
+
+
+.hero-text p {
+
+    font-size: 14.5px;
+
+    margin: 0;
+
+    color: var(--text-soft);
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   PROFILE PHOTO
+   ========================================== */
+
+.profile-photo {
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: var(--radius-photo);
+
+    object-fit: cover;
+
+    object-position: center 20%;
+
+    border: 3px solid #ffffff;
+
+    box-shadow:
+        0 4px 10px rgba(90, 60, 130, 0.2),
+        0 0 20px 4px rgba(240, 168, 194, 0.55);
+
+    position: absolute;
+
+    top: -95px;
+
+    right: -10px;
+
+    z-index: 5;
+}
+
+
+/* ==========================================
+   ABOUT SECTION
+   ========================================== */
+
+.about {
+
+    position: relative;
+
+    margin-bottom: 34px;
+}
+
+
+/* ==========================================
+   MOON
+   ========================================== */
+
+.moon {
+
+    display: block;
+
+    width: 100px;
+
+    height: auto;
+
+    position: absolute;
+
+    top: -20px;
+
+    left: -10px;
+
+    margin: 0;
+
+    z-index: 3;
+}
+
+
+/* ==========================================
+   ABOUT CARD
+   ========================================== */
+
+.about-card {
+
+    background: var(--card-bg);
+
+    border: 1.5px solid var(--card-border);
+
+    border-radius: var(--radius-bubble);
+
+    border-top-left-radius: 6px;
+
+    padding: 20px 24px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 14px rgba(90, 60, 130, 0.12);
+
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.about-card h2 {
+
+    font-family: 'Baloo 2', sans-serif;
+
+    font-size: 17px;
+
+    margin: 0 0 10px;
+}
+
+
+.about-card p {
+
+    font-size: 13.5px;
+
+    line-height: 1.55;
+
+    margin: 0 0 8px;
+
+    color: var(--text-soft);
+}
+
+
+.about-card p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.about-card strong {
+
+    color: var(--text-deep);
+}
+
+
+/* ==========================================
+   PROJECTS
+   ========================================== */
+
+.projects {
+
+    position: relative;
+
+    margin-bottom: 34px;
+}
+
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+}
+
+
+/* ==========================================
+   PROJECT CARDS
+   ========================================== */
+
+.project-card {
+
+    background: var(--card-bg);
+
+    border: 3px solid var(--pink-border);
+
+    border-radius: 14px;
+
+    padding: 8px 8px 10px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 10px rgba(90, 60, 130, 0.15);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.project-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 14px rgba(90, 60, 130, 0.18),
+        0 0 26px 6px rgba(240, 168, 194, 0.65);
+}
+
+
+.project-card img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+
+.project-card h3 {
+
+    font-family: 'Baloo 2', sans-serif;
+
+    font-weight: 600;
+
+    font-size: 12px;
+
+    margin: 8px 0 0;
+
+    color: var(--text-deep);
+}
+
+
+/* ==========================================
+   CONTACT
+   ========================================== */
+
+.contact {
+
+    position: relative;
+}
+
+
+.contact-card {
+
+    background: var(--card-bg);
+
+    border: 1.5px solid var(--card-border);
+
+    border-radius: var(--radius-bubble);
+
+    border-top-left-radius: 6px;
+
+    padding: 22px 24px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 14px rgba(90, 60, 130, 0.12);
+
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.contact-card h2 {
+
+    font-family: 'Baloo 2', sans-serif;
+
+    font-size: 17px;
+
+    margin: 0 0 12px;
+}
+
+
+.contact-card p {
+
+    font-size: 13.5px;
+
+    line-height: 1.55;
+
+    margin: 0 0 6px;
+
+    color: var(--text-soft);
+}
+
+
+/* ==========================================
+   SOCIAL LINKS
+   ========================================== */
+
+.socials {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 16px;
+}
+
+
+.socials a {
+
+    text-decoration: none;
+
+    font-family: 'Baloo 2', sans-serif;
+
+    font-weight: 600;
+
+    font-size: 13px;
+
+    color: var(--text-deep);
+
+    background: var(--card-bg);
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 2px 6px rgba(90, 60, 130, 0.15);
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.socials a:hover,
+.socials a:focus-visible {
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   DARK MODE SWITCH
+   ========================================== */
+
+.theme-switcher {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family: 'Baloo 2', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: var(--text-deep);
+
+    z-index: 10000;
+}
+
+
+.toggler {
+
+    width: 52px;
+
+    height: 28px;
+
+    padding: 0;
+
+    border: 2px solid var(--text-deep);
+
+    border-radius: 999px;
+
+    background: var(--card-bg);
+
+    cursor: pointer;
+
+    position: relative;
+
+    display: block;
+
+    z-index: 100;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.circle {
+
+    width: 20px;
+
+    height: 20px;
+
+    position: absolute;
+
+    top: 2px;
+
+    left: 3px;
+
+    border-radius: 50%;
+
+    background: var(--lavender-deep);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+body.dark-mode .circle {
+
+    transform: translateX(23px);
+
+    background: var(--pink-border);
+}
+
+
+/* ==========================================
+   RAINBOW CURSOR SPARKLE
+   ========================================== */
+
+.rainbow-sparkle {
+
+    position: fixed;
+
+    width: 20px;
+
+    height: 20px;
+
+    pointer-events: none;
+
+    z-index: 999999;
+
+    transform: translate(-50%, -50%);
+
+    background-color: hotpink;
+
+    clip-path: polygon(
+        50% 0%,
+        60% 40%,
+        100% 50%,
+        60% 60%,
+        50% 100%,
+        40% 60%,
+        0% 50%,
+        40% 40%
+    );
+
+    filter:
+        drop-shadow(0 0 4px hotpink)
+        drop-shadow(0 0 8px hotpink);
+
+    animation:
+        rainbowSparkle 1s ease-out forwards;
+}
+
+
+@keyframes rainbowSparkle {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.3)
+            rotate(0deg);
+    }
+
+
+    30% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.3)
+            rotate(30deg);
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0)
+            rotate(90deg);
+    }
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nav-buttons a,
+    .socials a,
+    .project-card {
+
+        transition: none;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 360px) {
+
+    .page {
+
+        padding:
+            18px
+            14px
+            50px;
+    }
+
+
+    .profile-photo {
+
+        width: 92px;
+
+        height: 92px;
+
+        border-radius: var(--radius-photo);
+
+        object-fit: cover;
+
+        border: 3px solid #ffffff;
+
+        box-shadow:
+            0 4px 10px rgba(90, 60, 130, 0.2),
+            0 0 20px 4px rgba(240, 168, 194, 0.55);
+
+        position: absolute;
+
+        top: -20px;
+
+        right: 4px;
+    }
+
+
+    .sparkle-layer {
+
+        opacity: 0.8;
+    }
+
+
+    .project-grid {
+
+        gap: 10px;
+    }
+
+
+    .nav-buttons {
+
+        gap: 6px;
+    }
+
+
+    .nav-buttons a {
+
+        padding:
+            7px
+            12px;
+
+        font-size: 12px;
+    }
+
+}
