@@ -800,6 +800,85 @@ nav {
         width: 100%;
     }
 }
+/* ==========================================
+     GRAPHIC DESIGN
+   ========================================== */
+.projects {
+
+    position: relative;
+
+    margin-bottom: 34px;
+}
+
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+}
+
+.project-card {
+
+    background: var(--card-bg);
+
+    border: 3px solid var(--pink-border);
+
+    border-radius: 14px;
+
+    padding: 8px 8px 10px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 10px rgba(90, 60, 130, 0.15);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.project-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 14px rgba(90, 60, 130, 0.18),
+        0 0 26px 6px rgba(240, 168, 194, 0.65);
+}
+
+
+.project-card img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+
+.project-card h3 {
+
+    font-family: 'Baloo 2', sans-serif;
+
+    font-weight: 600;
+
+    font-size: 12px;
+
+    margin: 8px 0 0;
+
+    color: var(--text-deep);
+}
 
 /* ==========================================
    CONTACT
