@@ -811,15 +811,6 @@ nav {
 }
 
 
-.project-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 16px;
-}
-
 .project-card {
 
     background: var(--card-bg);
@@ -879,7 +870,30 @@ nav {
 
     color: var(--text-deep);
 }
+.design {
+    padding: 20px 12px;
+    margin-bottom: 34px;
+}
 
+.design-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* two side by side = smaller */
+    gap: 20px;                        /* space between the cards */
+}
+
+/* Show the whole image instead of cropping it */
+.design-grid .project-card img {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Stack on small screens */
+@media (max-width: 560px) {
+    .design-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* ==========================================
    CONTACT
    ========================================== */
