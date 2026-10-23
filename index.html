@@ -320,28 +320,25 @@
              TAROT CARD
              ==================================== -->
 
-        <section id="tarot" class="tarot">
+       <section id="tarot" class="tarot">
+           <div class="tarot-scene">
+               <div class="tarot-card" id="tarot-card">
 
-            <div class="tarot-grid">
-
-
-                <!-- Tarot Card -->
-                <article class="project-card">
-
-                    <img
-                      card image itself 
-                    >
-
-                    <h3>
-                        Name of the card
-                    </h3>
-                    <h4>
-                        Description of the card
-                    </h4>
-                </article>
+                   <div class="tarot-face tarot-back project-card">
+                       <div class="back-art"><span>✦</span></div>
+                   </div>
+                   <div class="tarot-face tarot-front project-card" aria-live="polite">
+                <img id="card-image" src="" alt="">
+                <h3 id="card-name"></h3>
+                <h4 id="card-desc"></h4>
             </div>
-        </section>
-        
+
+        </div>
+    </div>
+
+    <button class="draw-btn" id="draw" type="button">Draw a card ♡</button>
+
+</section>
                 
         <!-- ====================================
              CONTACT
