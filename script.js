@@ -85,7 +85,7 @@ const deck = [
     { name: "The High Priestess", description: ".", image: "" },
     { name: "The Empress",        description: "s.", image: "" },
     { name: "The Lovers",         description: ".", image: "" },
-    { name: "The Star",           description: ".", image: "" },
+    { name: "The Star",           description: ".", image: "Pink Border Image(1).png" },
     { name: "The Moon",           description: ".", image: "" },
     { name: "The Sun",            description: ".", image: "" }
 ];
