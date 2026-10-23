@@ -75,37 +75,62 @@ themeToggle.addEventListener("click", function () {
 });
 
 
-function card (name, description, image) {
-    this.name = name;
-    this.description = description;
-    this.image = image;
+// ==========================================
+// TAROT
+// ==========================================
 
-
-
-    var deck = [
-        new card('Temperance', 'card details', 'photo name'),
-        new card 
-
-
+const deck = [
+    { name: "The Fool",           description: ".", image: "" },
+    { name: "The Magician",       description: ".", image: "" },
+    { name: "The High Priestess", description: ".", image: "" },
+    { name: "The Empress",        description: "s.", image: "" },
+    { name: "The Lovers",         description: ".", image: "" },
+    { name: "The Star",           description: ".", image: "" },
+    { name: "The Moon",           description: ".", image: "" },
+    { name: "The Sun",            description: ".", image: "" }
 ];
 
+const tarotCard = document.getElementById("tarot-card");
+const drawButton = document.getElementById("draw");
+const cardImage = document.getElementById("card-image");
+const cardName = document.getElementById("card-name");
+const cardDesc = document.getElementById("card-desc");
 
-    function getRandom(num){
-        var randomNumber = Math.floor(Math.random() * num);
-        return randomNumber;
-            
-            }
+const FLIP_TIME = 800;
+let lastIndex = -1;
+let busy = false;
 
-    document.getElementById("draw").onclick
-    = function(){
-        var index = getRandom(8);
-        var currentCard = deck[index];
+function drawCard() {
+  
+    let index;
+    do {
+        index = Math.floor(Math.random() * deck.length);
+    } while (index === lastIndex);
+    lastIndex = index;
 
+    const picked = deck[index];
 
+   
+    cardImage.src = picked.image;
+    cardImage.alt = picked.name;
+    cardName.textContent = picked.name;
+    cardDesc.textContent = picked.description;
 
-        document.getElementById("display").innerHTML = '<img src="images/' +
-            currentCard.image + '.jpg"><h3>'
-        currentCard.name + '</h3><p>' + 
-            currentCard.description + '</p>';
-    };
+    tarotCard.classList.add("is-flipped");
+    drawButton.textContent = "Draw again ♡";
 
+    setTimeout(() => { busy = false; }, FLIP_TIME);
+}
+
+drawButton.addEventListener("click", function () {
+    if (busy) return;       
+    busy = true;
+
+    if (tarotCard.classList.contains("is-flipped")) {
+        
+        tarotCard.classList.remove("is-flipped");
+        setTimeout(drawCard, FLIP_TIME);
+    } else {
+        drawCard();
+    }
+});
