@@ -831,6 +831,111 @@ nav {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================
+   TAROT CARD 
+   ========================================== */
+
+.tarot {
+    padding: 20px 12px;
+    margin-bottom: 34px;
+    text-align: center;
+}
+
+.tarot-scene {
+    width: min(280px, 100%);
+    margin: 0 auto 18px;
+    perspective: 1000px;       
+}
+
+.tarot-card {
+    display: grid;              
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.tarot-card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.tarot-face {
+    grid-area: 1 / 1;         
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+.tarot-front,
+.tarot-front:hover {
+    transform: rotateY(180deg);
+}
+
+
+.tarot-back:hover {
+    transform: none;
+}
+
+.tarot-front img {
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+.tarot-front h3 {
+    font-size: 15px;
+    margin: 10px 0 0;
+}
+
+.tarot-front h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 12.5px;
+    line-height: 1.45;
+    margin: 6px 8px 4px;
+    color: var(--text-soft);
+}
+
+/* Back of card: simple pastel design, swap for an image later if you like */
+.tarot-back {
+    position: relative;
+    min-height: 420px;
+}
+
+.back-art {
+    position: absolute;
+    inset: 8px;
+    border-radius: 8px;
+    border: 2px dashed rgba(255, 255, 255, 0.8);
+    background: linear-gradient(160deg, var(--lavender) 0%, var(--pink-mid) 60%, var(--peach) 100%);
+    display: grid;
+    place-items: center;
+    font-size: 64px;
+    color: #ffffff;
+    text-shadow: 0 0 14px var(--pink-border);
+}
+
+
+.draw-btn {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-deep);
+    background: var(--card-bg);
+    border: none;
+    padding: 9px 22px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(90, 60, 130, 0.15);
+    transition: transform 0.15s ease, background-color 0.4s ease, color 0.4s ease;
+}
+
+.draw-btn:hover,
+.draw-btn:focus-visible {
+    transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tarot-card { transition: none; }
+}
 /* ==========================================
    CONTACT
    ========================================== */
