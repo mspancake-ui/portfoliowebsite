@@ -83,7 +83,7 @@ const deck = [
     { name: "The Fool",           description: ".", image: "" },
     { name: "The Magician",       description: ".", image: "" },
     { name: "The High Priestess", description: ".", image: "" },
-    { name: "The Empress",        description: "s.", image: "" },
+    { name: "The Empress",        description: "The Empress represents abundance, creativity, and nurturing growth. It signals a fruitful time for bringing new ideas into a physical reality.", image: "empress.png" },
     { name: "The Lovers",         description: ".", image: "" },
     { name: "The Star",           description: ".", image: "Pink Border Image(1).png" },
     { name: "The Moon",           description: ".", image: "" },
