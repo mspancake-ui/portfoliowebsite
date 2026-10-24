@@ -80,14 +80,14 @@ themeToggle.addEventListener("click", function () {
 // ==========================================
 
 const deck = [
-    { name: "The Fool",           description: ".", image: "" },
-    { name: "The Magician",       description: ".", image: "" },
-    { name: "The High Priestess", description: ".", image: "" },
+    { name: "The Fool",           description: "The Fool card is numbered 0, which is considered to be a number of infinite potential. Consider him a blank slate, for The Fool has yet to develop a clear personality. He is the symbol of innocence - his journey to come will shape his character yet.", image: "thefool.png" },
+    { name: "The Magician",       description: "The Magician is the representation of pure willpower. With the power of the elements and the suits, he takes the potential innate in the fool and molds it into being with the power of desire.", image: "magician.png" },
+    { name: "The High Priestess", description: "The High Priestess is related with inner knowledge. Her appearance in a reading can signify that it is time for you to listen to your intuition rather than prioritizing your intellect and conscious mind.", image: "priest.png" },
     { name: "The Empress",        description: "The Empress represents abundance, creativity, and nurturing growth. It signals a fruitful time for bringing new ideas into a physical reality.", image: "empress.png" },
-    { name: "The Lovers",         description: ".", image: "" },
-    { name: "The Star",           description: ".", image: "Pink Border Image(1).png" },
-    { name: "The Moon",           description: ".", image: "" },
-    { name: "The Sun",            description: ".", image: "" }
+    { name: "The Lovers",         description: "One meaning behind the lovers card is the concept of choice - a choice between things that are opposing and mutually exclusive. This could be a dilemma that you need to think about carefully and make the best decision for your situation.", image: "thelovers.png" },
+    { name: "The Star",           description: "The Star brings hope, renewed power, and strength to carry on with life. It shows how abundantly blessed you are by the universe as evidenced by the various things around you.", image: "Pink Border Image(1).png" },
+    { name: "The Moon",           description: "On one hand, the Moon card can symbolize your imagination is taking the best of you. In the dark of the night, you are taking a path that you are unsure of, for there could be danger lurking in its depths.", image: "themoon.png" },
+    { name: "The Sun",            description: "The Sun card represents success, abundance, and radiance. Like the sun itself, it gives strength and vitality to all those that are lucky enough to feel its rays. There is much joy and happiness that is coming to you.", image: "thesun.png" }
 ];
 
 const tarotCard = document.getElementById("tarot-card");
