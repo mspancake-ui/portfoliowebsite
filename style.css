@@ -689,6 +689,77 @@ nav {
 
     color: var(--text-deep);
 }
+
+
+/* ==========================================
+   PROJECT TEXT + IMAGE LAYOUT
+   ========================================== */
+
+.project-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px;
+
+    margin-bottom: 28px;
+
+}
+
+/* TEXT SIDE */
+
+.project-text {
+
+    flex: 1;
+
+    text-align: left;
+
+}
+
+/* IMAGE SIDE */
+
+.project-image {
+
+    flex: 1;
+
+}
+
+.project-image img {
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 10px;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 560px) {
+
+    .project-card {
+
+        flex-direction: column;
+
+    }
+
+    .project-text,
+    .project-image {
+
+        width: 100%;
+
+    }
+
+}
+
 /* ==========================================
    GAME PROGRESS
    ========================================== */
