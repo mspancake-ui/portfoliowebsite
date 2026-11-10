@@ -714,18 +714,17 @@ nav {
 /* TEXT SIDE */
 
 .project-text {
-
     flex: 1;
-
-    text-align: left;
-
+    min-width: 0;
+    text-align: center;
 }
 
 /* IMAGE SIDE */
 
 .project-image {
 
-    flex: 1;
+    flex: 1.2;
+   min-width: 0;
 
 }
 
