@@ -1,127 +1,153 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Raquel's Portfolio</title>
+    <title>Raquel's Web Projects</title>
 
     <link rel="stylesheet" href="style.css">
-    <body>
-     <!-- ====================================
-             NAVIGATION
-             ==================================== -->
-<div class ="page">
-        <nav>
+</head>
 
-            <div class="nav-buttons">
+<body>
 
-                <a href="index.html">
-                    About Me!
-                </a>
+<div class="page">
 
-                <a href="index.html">
-                    Contact Me?
-                </a>
+    <!-- NAVIGATION -->
 
-                <a href="webproj.html">
-                Projects!
-                </a>
-                
-            </div>
+    <nav>
 
+        <div class="nav-buttons">
 
-            <div class="theme-switcher">
+            <a href="index.html">About Me!</a>
 
-                <span>DARK</span>
+            <a href="index.html#contact">Contact Me?</a>
 
-                <button
-                    class="toggler"
-                    id="theme-toggle"
-                    aria-label="Toggle dark and light mode"
-                    type="button"
-                >
-                    <span class="circle"></span>
-                </button>
+            <a href="webproj.html">Projects!</a>
 
-                <span>LIGHT</span>
+        </div>
 
-            </div>
+        <div class="theme-switcher">
 
-        </nav>
+            <span>DARK</span>
 
-     <!-- ====================================
-            WEB PROJECTS
-             ==================================== -->
+            <button
+                class="toggler"
+                id="theme-toggle"
+                aria-label="Toggle dark and light mode"
+                type="button"
+            >
+                <span class="circle"></span>
+            </button>
 
-        <section class="projects">
+            <span>LIGHT</span>
+
+        </div>
+
+    </nav>
 
 
+    <!-- WEB PROJECTS -->
 
-            <div class="project-card">
-                
+    <section class="projects">
+
+        <div class="project-grid">
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card">
+
                 <div class="project-text">
 
+                    <h3>Building My Own Web Server!</h3>
 
-                <h2>
-                    Building My Own Web Server!
-                </h2>
+                    <p>
+                        In this project, I created my own private
+                        server through Python code.
+                    </p>
 
-                <p>
-                   In this project, I created my own private server through the code in Python. 
-                </p>
+                    <p>
+                        Here are some more details about what
+                        I have learned! This project is still
+                        in progress.
+                    </p>
 
-                <p>
-                   Here are some more details about what I have learned! (This is still in progress) 
-                </p>
+                </div>
 
-            </div>
+                <div class="project-image">
+
+                    <img
+                        src="images/server.png"
+                        alt="My Python server project"
+                    >
+
+                </div>
+
+            </article>
 
 
-    <section class="project-image">
-        
-        <div class="project-card">
-            <img src="images/server.png" alt="My Python server project">
+            <!-- PROJECT 2 -->
+
+            <article class="project-card">
+
+                <div class="project-text">
+
+                    <h3>Upcoming Project!</h3>
+
+                    <p>
+                        This will contain another web development
+                        project. More details coming soon!
+                    </p>
+
+                </div>
+
+                <div class="project-image">
+
+                    <img
+                        src="images/project2.png"
+                        alt="My second project"
+                    >
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card">
+
+                <div class="project-text">
+
+                    <h3>Another Project Coming Soon!</h3>
+
+                    <p>
+                        This is another project currently
+                        in progress.
+                    </p>
+
+                </div>
+
+                <div class="project-image">
+
+                    <img
+                        src="images/project3.png"
+                        alt="My third project"
+                    >
+
+                </div>
+
+            </article>
 
         </div>
 
-            </div>
+    </section>
 
-            
-        </section>
+</div>
 
+<script src="script.js"></script>
 
-   <div class="project-card">
-       
-        <div class="project-text">
-            <p>
-                this will contain other projects eventuall, in progress still- 
-            </p>
-
-             </div>
-
-        <div class="project-image">
-            <img src="images/project2.png" alt="My second project">
-        </div>
-
-    </div>
-
-   <div class="project-card">
-            <p>
-                this is also in progress another project will go here 
-            </p>
-
-             </div>
-      <div class="project-image">
-        <img src="images/project3.png" alt="My third project">
-    </div>
-
-        </div>
-
-</section>
-
-     
-    <script src="script.js"></script>
-
-    </body>
-</head>
+</body>
+</html>
