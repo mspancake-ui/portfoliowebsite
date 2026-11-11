@@ -138,7 +138,7 @@ drawButton.addEventListener("click", function () {
 const img = document.getElementById("server-img");
 const code = document.getElementById("server-code");
 const btn = document.getElementById("toggle-btn");
-
+if (btn) {
 btn.addEventListener("click", function () {
     img.classList.toggle("hidden");
     code.classList.toggle("hidden");
@@ -149,3 +149,4 @@ btn.addEventListener("click", function () {
         btn.textContent = "View Image";
     }
 });
+}
