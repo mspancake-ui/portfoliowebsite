@@ -134,3 +134,18 @@ drawButton.addEventListener("click", function () {
         drawCard();
     }
 });
+
+const img = document.getElementById("server-img");
+const code = document.getElementById("server-code");
+const btn = document.getElementById("toggle-btn");
+
+btn.addEventListener("click", function () {
+    img.classList.toggle("hidden");
+    code.classList.toggle("hidden");
+
+    if (code.classList.contains("hidden")) {
+        btn.textContent = "View Code";
+    } else {
+        btn.textContent = "View Image";
+    }
+});
