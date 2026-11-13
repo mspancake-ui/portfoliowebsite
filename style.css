@@ -1161,6 +1161,9 @@ nav {
     color: var(--text-soft);
 }
 
+.hidden {
+    display: none;
+}
 
 /* ==========================================
    SOCIAL LINKS
