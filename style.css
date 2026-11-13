@@ -1484,6 +1484,7 @@ body.dark-mode .circle {
 }
 
 #server-code {
+   position: absolute;
     width: 100%;
     height: 230px;
     overflow: auto;
