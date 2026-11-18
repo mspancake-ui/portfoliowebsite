@@ -1508,3 +1508,36 @@ body.dark-mode .circle {
     font-family: 'Baloo 2', sans-serif;
     cursor: pointer;
 }
+
+
+
+/* ==========================================
+  WEATHER APP
+   ========================================== */
+
+#weather-container {
+    background: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+
+
+}
+
+
+#city-input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+}
+
+#search-button {
+    padding: 10px;
+    border: none;
+    background-color: lightblue;
+    color: white;
+    border-radius: 5px;
+
+}
