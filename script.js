@@ -205,11 +205,10 @@ const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", getWeather);
 
 async function getWeather() {
-    const city = cityInput.value.trim(); 
-    console.log(city);
+    const city = cityInput.value.trim();
 
-    const geoURL = 'https://geocoding-api.open-meteo.com/v1/search?name=${city}'
-
+    // Geocoding API (City → Latitude & Longitude)
+    const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${city}`;
     const geoResponse = await fetch(geoUrl);
     const geoData = await geoResponse.json();
     console.log(geoData);
@@ -217,11 +216,11 @@ async function getWeather() {
     const latitude = geoData.results[0].latitude;
     const longitude = geoData.results[0].longitude;
     const country = geoData.results[0].country;
-    
-    //Weather API
-    const weatherUrl = 'https://geocoding-api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
+
+    // Weather API
+    const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
     const weatherResponse = await fetch(weatherUrl);
-    const weatherData = weatherResponse.json();
+    const weatherData = await weatherResponse.json();
     console.log(weatherData)
 
     const temperature = weatherData.current_weather.temperature;
@@ -229,18 +228,15 @@ async function getWeather() {
     const weatherCode = weatherData.current_weather.weathercode;
     const [weatherCondition, weatherImage] = weatherCodeMap[weatherCode];
 
-    if (country && city !=country) {
-        document.getElementById("city").innerText = '${city}, ${country}';
+    if (country && city != country) {
+        document.getElementById("city").innerText = `${city}, ${country}`;
     }
     else {
-        document.getElementById("city").innerText = city;
+        document.getElementById("city").innerText = `${city}`;
     }
-
-    document.getElementById("city").innerText ='${city}, ${country}';
     document.getElementById("weather-image").src = weatherImage;
     document.getElementById("temperature").innerText = temperature;
-    document.getElementById("weather-condition").innerText = weatherCondition; 
-    document.getElementById("wind-speed").innerText = windSpeed;  
-    
-    }
+    document.getElementById("weather-condition").innerText = weatherCondition
+    document.getElementById("wind-speed").innerText = windSpeed;
+}
 
