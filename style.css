@@ -1516,7 +1516,7 @@ body.dark-mode .circle {
    ========================================== */
 
 #weather-container {
-    background: whitesmoke;
+    background: #FFF0F5;
     border-radius: 10px;
     text-align: center;
     padding: 20px;
@@ -1536,7 +1536,7 @@ body.dark-mode .circle {
 #search-button {
     padding: 10px;
     border: none;
-    background-color: lightblue;
+    background-color: #F0F8FF;
     color: white;
     border-radius: 5px;
 
