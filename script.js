@@ -224,7 +224,7 @@ async function getWeather() {
     const weatherData = weatherResponse.json();
     console.log(weatherData)
 
-    const temperature = weatherData.current_weather.temperature;\
+    const temperature = weatherData.current_weather.temperature;
     const windSpeed = weatherData.current_weather.windspeed;
     const weatherCode = weatherData.current_weather.weathercode;
     const [weatherCondition, weatherImage] = weatherCodeMap[weatherCode];
