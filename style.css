@@ -1498,7 +1498,14 @@ body.dark-mode .circle {
     padding: 12px;
     border-radius: 10px;
     font-size: 12px;
-     object-fit: contain;
+  
+}
+
+#server-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
 }
 
 #toggle-btn {
