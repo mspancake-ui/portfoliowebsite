@@ -1468,22 +1468,19 @@ body.dark-mode .circle {
 
 /*  FLOAT EFFECT */
 
-.float-effect {
+.project-card img {
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-.float-effect:hover {
+.project-card img:hover {
     transform: translateY(-4px);
-
     box-shadow:
         0 6px 14px rgba(90, 60, 130, 0.18),
         0 0 18px rgba(240, 168, 194, 0.35);
 }
-.hidden {
-    display: none;
-}
+
 
 #server-code {
     position: relative;
