@@ -1503,6 +1503,7 @@ body.dark-mode .circle {
     padding: 12px;
     border-radius: 10px;
     font-size: 12px;
+     object-fit: contain;
 }
 
 #toggle-btn {
