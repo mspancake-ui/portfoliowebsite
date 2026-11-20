@@ -1485,6 +1485,11 @@ body.dark-mode .circle {
     display: none !important;
 }
 
+.project-image {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
 
 #server-code {
    display: block;
