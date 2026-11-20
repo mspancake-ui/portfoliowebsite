@@ -1022,7 +1022,7 @@ nav {
     color: var(--text-soft);
 }
 
-/* Back of card: simple pastel design, swap for an image later if you like */
+
 .tarot-back {
     position: relative;
     min-height: 420px;
@@ -1487,19 +1487,27 @@ body.dark-mode .circle {
 
 
 #server-code {
+   display: block;
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
     height: 280px;
     margin: 15px 0;
     padding: 12px;
-    overflow: auto; /* Adds scrollbars inside the box instead of spilling out */
+    overflow-x: auto; /* Horizontal scrollbar stays inside the dark box */
+    overflow-y: auto;
     white-space: pre; /* Keeps code formatting intact while scrolling horizontally */
     text-align: left;
     background: #2b2340;
     color: #f5eaff;
     border-radius: 10px;
     font-size: 12px;
+}
+
+#server-code code {
+    display: block;
+    width: max-content; /* Lets content scroll horizontally inside #server-code without stretching it */
+    min-width: 100%;
 }
 
 #toggle-btn {
