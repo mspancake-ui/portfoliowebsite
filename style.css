@@ -739,15 +739,10 @@ nav {
 .design-grid .project-card:hover {
      
    
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 8px;
-
     box-shadow:
         0 0 14px rgba(90, 60, 130, 0.18),
         0 0 26px 6px rgba(240, 168, 194, 0.65);
      
-   transform: translateY(-8px); /* Moves image up 8px */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 
 }
 
